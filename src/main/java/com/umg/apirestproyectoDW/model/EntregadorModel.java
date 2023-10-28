@@ -1,2 +1,40 @@
-package com.umg.apirestproyectoDW.model;public class EntregadorModel {
+package com.umg.apirestproyectoDW.model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Entregador")
+public class EntregadorModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column
+    private String nombre;
+    @Column
+    private String tel;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
 }
